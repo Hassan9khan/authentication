@@ -13,9 +13,7 @@ form.addEventListener('submit', (event)=>{
   .then((userCredential) => {
     const user = userCredential.user;
     console.log(user);
-    window.location = 'home.html'
-    // email.value = ''
-    // password.value = ''
+    window.location = 'index.html'
   })
   .catch((error) => {
     const errorCode = error.code;
