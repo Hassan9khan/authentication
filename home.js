@@ -6,7 +6,7 @@ onAuthStateChanged(auth, (user) => {
       const uid = user.uid;
       console.log(uid);
     } else {
-        window.location = 'login.html'
+        window.location = 'index.html'
     }
   });
 
@@ -16,7 +16,7 @@ onAuthStateChanged(auth, (user) => {
     
          signOut(auth).then(() => {
             console.log('logout successfully');
-            window.location = 'login.html'
+            window.location = 'index.html'
          }).catch((error) => {
           console.log(error);
         });
