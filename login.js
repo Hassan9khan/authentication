@@ -1,4 +1,6 @@
-import { signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import { signInWithEmailAndPassword ,
+         sendPasswordResetEmail
+ } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 import { auth } from "./config.js"
 
 const form = document.querySelector('#form')
@@ -22,3 +24,20 @@ form.addEventListener('submit', (event)=>{
   });
    
 })
+
+// const email = document.querySelector('#email')
+
+// email.addEventListener('submit' , (event)=>{
+//   event.preventDefault
+
+//   sendPasswordResetEmail(auth, email.value)
+//   .then(() => {
+//     console.log('Password reset email sent');
+//     alert('Password reset email sent. Please check your inbox.');
+//   })
+//   .catch((error) => {
+//     console.error('Error sending password reset email:', error);
+//     alert('Error sending password reset email. Please try again.');
+//   });
+
+// })
